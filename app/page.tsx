@@ -5,10 +5,10 @@ import { styleText } from "@/utils/styleText";
 
 export default function Home() {
   const description = `
-  Bonjour, je suis Roberto, prêt à comprendre vos exigences pour trouver l'âme sœur qui vous correspond.`;
+  Bonjour, je suis Roberto, prêt à vous aider pour trouver l'âme sœur qui vous correspond.`;
   const styledDescription = styleText(description);
 
-  const buttonText = "Laissez vous guider par Roberto";
+  const buttonText = "Continuer";
   const styledButtonText = styleText(buttonText); // This is unused in the current code
 
   return (

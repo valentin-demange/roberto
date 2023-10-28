@@ -1,49 +1,49 @@
 "use client";
 
 import React from "react";
-import styles from "./form.module.css";
+import styles from "./form-2.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-export default function Form() {
+export default function Form2() {
   const router = useRouter();
 
   const goToNextStep = () => {
-    router.push("/form-2");
+    router.push("/chat");
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.spacer} />
-      <div className={styles.prompt}>{"Comment vous identifiez vous ?"}</div>
+      <div className={styles.prompt}>{"Que recherchez vous ?"}</div>
       <div className={styles.flex}>
         <button className={styles.card} onClick={goToNextStep}>
           <Image
             className={styles.image}
-            src="/woman.png"
+            src="/man.png"
             width={200}
             height={200}
-            alt="woman"
+            alt="man"
             style={{ position: "relative", zIndex: -1 }}
           />
         </button>
         <button className={styles.card} onClick={goToNextStep}>
           <Image
             className={styles.image}
-            src="/giraffe-female.png"
+            src="/giraffe-male.png"
             width={200}
             height={200}
-            alt="giraffe female"
+            alt="giraffe male"
             style={{ position: "relative", zIndex: -1 }}
           />
         </button>
         <div className={styles.card} onClick={goToNextStep}>
           <Image
             className={styles.image}
-            src="/koala-female.png"
+            src="/koala-male.png"
             width={200}
             height={200}
-            alt="koala female"
+            alt="koala male"
             style={{ position: "relative", zIndex: -1 }}
           />
         </div>
