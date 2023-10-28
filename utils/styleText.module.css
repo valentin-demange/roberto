@@ -1,0 +1,19 @@
+.male {
+  font-weight: bold;
+  color: var(--color-blue-default);
+}
+
+.koala {
+  font-weight: bold;
+  color: var(--color-green-default);
+}
+
+.giraffe {
+  font-weight: bold;
+  color: var(--color-yellow-default);
+}
+
+.female {
+  font-weight: bold;
+  color: var(--color-pink-default);
+}
