@@ -16,7 +16,7 @@ export default function Home() {
       <div className={styles.spacer} />
       <div className={styles.description}>{styledDescription}</div>
       <div className={styles.card}>
-        <Link href="/form">
+        <Link href="/form-1">
           <h2>{styledButtonText}</h2>
         </Link>
       </div>
