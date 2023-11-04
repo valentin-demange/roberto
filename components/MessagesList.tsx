@@ -8,17 +8,11 @@ export const MessagesList = () => {
 
   return (
     <div className={styles.container}>
-    <div className={styles.messagesListContainer}>
-      {messages.map((message) => (
-        <>
-          {message.author === "roberto" ? (
-            <Message message={message} />
-          ) : (
-            <Message message={message} />
-          )}
-        </>
-      ))}
-    </div>
+      <div className={styles.messagesListContainer}>
+        {messages.map((message, index) => (
+          <Message message={message} key={index} />
+        ))}
+      </div>
     </div>
   );
 };

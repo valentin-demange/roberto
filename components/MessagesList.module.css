@@ -1,3 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  overflow-y: auto;
+}
+
 .messagesListContainer {
   height: 100%;
   padding: 0 var(--space-3);
@@ -6,12 +14,5 @@
   flex-direction: column;
   align-items: center;
   width: 70%;
-  justify-content: end;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: end;
 }
