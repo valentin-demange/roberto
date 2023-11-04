@@ -5,7 +5,7 @@ import styles from "./chat.module.css";
 import { useRouter } from "next/navigation";
 import { WaitingMessage } from "@/components/WaitingMessage";
 
-export default function Chat() {
+export default function ChatPage() {
   const router = useRouter();
 
   const reset = () => {
@@ -17,8 +17,8 @@ export default function Chat() {
   return (
     <div className="container">
       <div className="spacer" />
-      <div>
-        <WaitingMessage />
+      <div className="text" style={{marginBottom: "40px"}}>
+        {"Buildin' the chat..."}
       </div>
       <div className="spacer" />
       <button className={`button ${styles.resetButton}`} onClick={reset}>

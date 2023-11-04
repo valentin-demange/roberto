@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { TAnimal } from "../type";
 
-export default function Form2() {
+export default function FormPage2() {
   const router = useRouter();
 
   const goToNextStep = (choice: TAnimal) => {

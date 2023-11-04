@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import { styleText } from "@/utils/styleText";
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function HomePage() {
   const description = `
   Bonjour je suis Roberto, prêt à vous aider pour trouver l'âme sœur qui vous correspond.`;
   const styledDescription = styleText(description);
