@@ -1,0 +1,9 @@
+.messageContainer {
+  align-self: flex-start;
+  background-color: var(--color-blue-default);
+  max-width: 80%;
+  width: fit-content;
+  padding: var(--space-2) var(--space-2);
+  border-radius: var(--border-radius);
+  margin: var(--space-3) 0;
+}

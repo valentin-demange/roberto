@@ -1,5 +1,6 @@
 :root {
-  --border-radius: 12px;
+  --border-radius-xl: 12px;
+  --border-radius: 8px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -42,11 +43,15 @@
   --font-size-2: 18px;
   --font-size-3: 24px;
 
+  --space-0: 0px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 18px;
   --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
 }
 
 * {
@@ -84,7 +89,7 @@ html {
 
 .text {
   /* font-family: var(--font-mono); */
-  font-size: var(--font-size-3);
   text-align: center;
-  color: var(--color-grey-lighter)
+  font-size: var(--font-size-3);
+  color: var(--color-grey-lighter);
 }

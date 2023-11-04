@@ -1,0 +1,6 @@
+.messagesListContainer {
+  height: 100%;
+  width: 60%;
+  overflow-y: auto;
+  padding: 0 var(--space-3);
+}

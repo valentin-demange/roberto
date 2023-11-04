@@ -1,9 +1,9 @@
 .nextStepButton:hover {
-  border: 3px solid var(--color-blue-default);
+  border: 1px solid var(--color-blue-default);
 }
 
 .nextStepButton {
   padding: var(--space-2) var(--space-4);
-  border-radius: var(--border-radius);
-  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid rgba(0, 0, 0, 0);
 }

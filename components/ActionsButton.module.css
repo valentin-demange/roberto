@@ -3,7 +3,24 @@
 }
 
 .resetButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(0, 0, 0, 0);
-  padding: var(--space-2) var(--space-3) ;
+  padding: var(--space-1) var(--space-3);
+  margin: 0;
+  font-size: var(--font-size-2);
+  height: 100%;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-grey-darker);
+  font-size: var(--font-size-2);
+  text-wrap: nowrap;
+}
+
+.resetSign {
+  margin-right: 8px;
+  padding-bottom: 4px;
+  font-size: var(--font-size-3);
+  font-weight: lighter;
 }

@@ -14,11 +14,9 @@ export const ActionsButton = () => {
   };
 
   return (
-      <button
-        className={`button ${styles.resetButton}`}
-        onClick={reset}
-      >
-        Reset
+      <button className={`button ${styles.resetButton}`} onClick={reset}>
+       <div className={styles.resetSign}>&#8634;</div>
+       <div>Reset</div>
       </button>
   );
 };

@@ -1,0 +1,37 @@
+.virtualKeyboardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-grey-darker);
+  border-radius: var(--border-radius);
+  margin: var(--space-4) var(--space-5);
+  width: calc(60% - (2 * var(--space-5)));
+}
+
+.virtualKeyboardInput {
+  border: 0px;
+  font-size: var(--font-size-2);
+  color: var(--color-grey-lighter);
+  outline: none;
+  background-color: var(--color-grey-darker);
+  flex: 1;
+}
+
+.virtualKeyboardInput:focus {
+  border: none;
+  outline: none;
+}
+
+.virtualKeyboardInput::placeholder {
+  /* Change placeholder color */
+  color: var(--color-grey-default);
+}
+
+.sendMessageButton {
+  font-size: var(--font-size-3);
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  padding: var(--space-1) var(--space-2);
+  border-radius: 50%;
+}

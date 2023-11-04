@@ -23,9 +23,9 @@ export default function HomePage() {
       <div
         className="text"
         style={{
+          margin: "100px",
           marginBottom: "40px",
-          paddingLeft: "200px",
-          paddingRight: "200px",
+          textAlign: "justify",
         }}
       >
         {styledDescription}
