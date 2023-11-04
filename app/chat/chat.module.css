@@ -1,8 +1,0 @@
-.resetButton {
-  margin-bottom: var(--space-5);
-}
-
-.resetButton:hover {
-  border: 3px solid var(--color-green-default);
-}
-

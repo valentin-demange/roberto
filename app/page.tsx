@@ -20,8 +20,20 @@ export default function HomePage() {
   return (
     <div className="container">
       <div className="spacer" />
-      <div className="text" style={{marginBottom: "40px"}}>{styledDescription}</div>
-      <button className={`button ${styles.nextStepButton}`} onClick={goToNextStep}>
+      <div
+        className="text"
+        style={{
+          marginBottom: "40px",
+          paddingLeft: "200px",
+          paddingRight: "200px",
+        }}
+      >
+        {styledDescription}
+      </div>
+      <button
+        className={`button ${styles.nextStepButton}`}
+        onClick={goToNextStep}
+      >
         {styledButtonText}
       </button>
       <div className="spacer" />

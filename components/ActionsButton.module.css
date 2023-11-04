@@ -1,0 +1,9 @@
+.resetButton:hover {
+  background-color: var(--color-grey-darker);
+}
+
+.resetButton {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  padding: var(--space-2) var(--space-3) ;
+}

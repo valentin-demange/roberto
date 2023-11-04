@@ -65,12 +65,9 @@ html {
 }
 
 .button {
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--border-radius);
-  border: 3px solid rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
   font-size: var(--font-size-3);
-  color: var(--color-grey-lighter)
+  color: var(--color-grey-lighter);
 }
 
 .spacer {
@@ -81,8 +78,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 200px;
   min-height: 100vh;
+  width: 100%;
 }
 
 .text {
