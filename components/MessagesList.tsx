@@ -1,22 +1,24 @@
 import { useContext } from "react";
 import { MessagesContext } from "./MessageContextProvider";
 import styles from "./MessagesList.module.css";
-import { MessageRoberto } from "./MessageRoberto";
+import { Message } from "./Message";
 
 export const MessagesList = () => {
   const { messages } = useContext(MessagesContext);
 
   return (
+    <div className={styles.container}>
     <div className={styles.messagesListContainer}>
       {messages.map((message) => (
         <>
           {message.author === "roberto" ? (
-            <MessageRoberto message={message.text} />
+            <Message message={message} />
           ) : (
-            <MessageRoberto message={message.text} />
+            <Message message={message} />
           )}
         </>
       ))}
+    </div>
     </div>
   );
 };

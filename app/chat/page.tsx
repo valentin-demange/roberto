@@ -10,11 +10,13 @@ import styles from "./chat.module.css";
 export default function ChatPage() {
   return (
     <MessagesContextProvider>
-      <div className="container">
+      <div className={`container ${styles.container}`}>
         <div className={styles.actionsButtonContainer}>
           <ActionsButton />
         </div>
-        <MessagesList />
+        <div className={styles.messagesListContainer}>
+          <MessagesList />
+        </div>
         <div className="spacer" />
         <VirtualKeyboard />
       </div>
