@@ -7,40 +7,46 @@
   --card-rgb: 100, 100, 100;
   --card-border-rgb: 200, 200, 200;
 
-
   /* Pink */
-  --color-pink-default: #FF91A4;
-  --color-pink-light: #FFC1C8;
-  --color-pink-lighter: #FFEBEE;
-  --color-pink-dark: #E66B7D;
-  --color-pink-darker: #B24A5A;
+  --color-pink-default: #ff91a4;
+  --color-pink-light: #ffc1c8;
+  --color-pink-lighter: #ffebee;
+  --color-pink-dark: #e66b7d;
+  --color-pink-darker: #b24a5a;
   /* Blue */
-  --color-blue-default: #6699FF;
-  --color-blue-light: #99CCFF;
-  --color-blue-lighter: #CCE5FF;
-  --color-blue-dark: #3366CC;
-  --color-blue-darker: #1A3366;
+  --color-blue-default: #6699ff;
+  --color-blue-light: #99ccff;
+  --color-blue-lighter: #cce5ff;
+  --color-blue-dark: #3366cc;
+  --color-blue-darker: #1a3366;
   /* Green */
-  --color-green-default: #66CC99;
-  --color-green-light: #99FFCC;
-  --color-green-lighter: #CCFFE5;
+  --color-green-default: #66cc99;
+  --color-green-light: #99ffcc;
+  --color-green-lighter: #ccffe5;
   --color-green-dark: #339966;
-  --color-green-darker: #1A4D33;
+  --color-green-darker: #1a4d33;
   /* Yellow */
-  --color-yellow-default: #FFDD55;
-  --color-yellow-light: #FFEE99;
-  --color-yellow-lighter: #FFF9CC;
-  --color-yellow-dark: #E6BB33;
-  --color-yellow-darker: #B28D1A;
+  --color-yellow-default: #ffdd55;
+  --color-yellow-light: #ffee99;
+  --color-yellow-lighter: #fff9cc;
+  --color-yellow-dark: #e6bb33;
+  --color-yellow-darker: #b28d1a;
   /* Grey */
-  --color-grey-default: #A9A9A9;
-  --color-grey-light: #D3D3D3;
-  --color-grey-lighter: #F0F0F0;
+  --color-grey-default: #a9a9a9;
+  --color-grey-light: #d3d3d3;
+  --color-grey-lighter: #f0f0f0;
   --color-grey-dark: #808080;
   --color-grey-darker: #404040;
-  
 
+  --font-size-1: 12px;
+  --font-size-2: 18px;
+  --font-size-3: 24px;
 
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 18px;
+  --space-5: 24px;
 }
 
 * {
@@ -56,4 +62,32 @@ a {
 
 html {
   color-scheme: dark;
+}
+
+.button {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius);
+  border: 3px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  font-size: var(--font-size-3);
+  color: var(--color-grey-lighter)
+}
+
+.spacer {
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 200px;
+  min-height: 100vh;
+}
+
+.text {
+  /* font-family: var(--font-mono); */
+  font-size: var(--font-size-3);
+  text-align: center;
+  color: var(--color-grey-lighter)
 }

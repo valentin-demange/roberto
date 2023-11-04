@@ -9,39 +9,39 @@ import { TAnimal } from "../type";
 export default function Form1() {
   const router = useRouter();
 
-  const goToNextStep = (choice:TAnimal) => {
-    localStorage.setItem('animal_female', choice);
+  const goToNextStep = (choice: TAnimal) => {
+    localStorage.setItem("animal_female", choice);
     router.push("/form-2");
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.spacer} />
-      <div className={styles.prompt}>{"Comment vous identifiez vous ?"}</div>
-      <div className={styles.flex}>
-        <button className={styles.card} onClick={() => goToNextStep("human")}>
+    <div className="container">
+      <div className="spacer" />
+      <div className="text" style={{marginBottom: "40px"}}>{"Comment vous identifiez vous ?"}</div>
+      <div className={styles.avatarContainer}>
+        <div className={styles.avatarCard} onClick={() => goToNextStep("human")}>
           <Image
-            className={styles.image}
+            className={styles.avatarImage}
             src="/woman.png"
             width={200}
             height={200}
             alt="woman"
             style={{ position: "relative", zIndex: -1 }}
           />
-        </button>
-        <button className={styles.card} onClick={() => goToNextStep("giraffe")}>
+        </div>
+        <div className={styles.avatarCard} onClick={() => goToNextStep("giraffe")}>
           <Image
-            className={styles.image}
+            className={styles.avatarImage}
             src="/giraffe-female.png"
             width={200}
             height={200}
             alt="giraffe female"
             style={{ position: "relative", zIndex: -1 }}
           />
-        </button>
-        <div className={styles.card} onClick={() => goToNextStep("koala")}>
+        </div>
+        <div className={styles.avatarCard} onClick={() => goToNextStep("koala")}>
           <Image
-            className={styles.image}
+            className={styles.avatarImage}
             src="/koala-female.png"
             width={200}
             height={200}
@@ -50,7 +50,7 @@ export default function Form1() {
           />
         </div>
       </div>
-      <div className={styles.spacer} />
+      <div className="spacer" />
     </div>
   );
 }
