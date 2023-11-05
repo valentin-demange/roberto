@@ -24,3 +24,8 @@
   .dot:nth-child(3) {
     animation-delay: 0.4s;
   }
+
+  .dotContainer {
+    align-self: start;
+    margin: var(--space-3) var(--space-2);
+  }

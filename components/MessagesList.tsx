@@ -19,14 +19,16 @@ export const MessagesList = () => {
     let isCancelled = false; // Flag to determine if the effect has been cancelled.
 
     const askRoberto = async () => {
-      // After 2 seconds, Roberto starts to answer
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // After 1 seconds, Roberto starts to answer
+      await new Promise((resolve) => setTimeout(resolve, 1500));
       if (isCancelled) return; // Check if the effect has been cancelled.
       setIsRobertoAnswering(true);
       console.log("Roberto is answering");
       const results = await Promise.all([
         getRobertoAnswer(),
-        new Promise((resolve) => setTimeout(resolve, 2000 + Math.random() * 2000)),
+        new Promise((resolve) =>
+          setTimeout(resolve, 1000 + Math.random() * 2000)
+        ),
       ]);
       if (isCancelled) return; // Check again after the timeout.
       addMessage({ text: results[0], author: "roberto" });
@@ -51,7 +53,9 @@ export const MessagesList = () => {
       <div className={styles.messagesListContainer}>
         {isRobertoAnswering && <WaitingMessage />}
         {reversedMessages.map((message, index) => (
-          <Message message={message} key={index} />
+          <Message key={index} author={message.author}>
+            {message.text}
+          </Message>
         ))}
       </div>
     </div>
