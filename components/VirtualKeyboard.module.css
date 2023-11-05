@@ -6,7 +6,7 @@
   background-color: var(--color-grey-darker);
   border-radius: var(--border-radius);
   margin: var(--space-4);
-  width: 65%;
+  width: 600px;
 }
 
 .virtualKeyboardInput {
@@ -34,4 +34,5 @@
   border: 0px;
   padding: var(--space-1) var(--space-2);
   border-radius: 50%;
+  color: var(--color-grey-light);
 }

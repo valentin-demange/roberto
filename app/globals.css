@@ -38,6 +38,7 @@
   --color-grey-lighter: #f0f0f0;
   --color-grey-dark: #808080;
   --color-grey-darker: #404040;
+  --color-grey-darkest: #101010;
 
   --font-size-1: 12px;
   --font-size-2: 18px;
@@ -52,6 +53,8 @@
   --space-6: 32px;
   --space-7: 48px;
   --space-8: 64px;
+
+  background-color: var(--color-grey-darkest);
 }
 
 * {

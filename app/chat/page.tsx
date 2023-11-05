@@ -17,7 +17,6 @@ export default function ChatPage() {
         <div className={styles.messagesListContainer}>
           <MessagesList />
         </div>
-        <div className="spacer" />
         <VirtualKeyboard />
       </div>
     </MessagesContextProvider>
