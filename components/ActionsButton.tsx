@@ -10,6 +10,7 @@ export const ActionsButton = () => {
   const reset = () => {
     localStorage.removeItem("animal_female");
     localStorage.removeItem("animal_male");
+    localStorage.removeItem("messages");
     router.push("/");
   };
 

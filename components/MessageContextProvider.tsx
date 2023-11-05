@@ -15,23 +15,28 @@ export const MessagesContext = createContext({
 
 interface MessagesProviderProps {
   children: ReactNode;
+  messagesListInit: TMessage[];
 }
 
 export const MessagesContextProvider: FC<MessagesProviderProps> = ({
-  children,
+  children, messagesListInit
 }) => {
-  const [messages, setMessages] = useState<TMessage[]>([]);
+  const lastMessage = messagesListInit[messagesListInit.length - 1];
+  const lastMessageAuthor = lastMessage?.author;
+
+  const [messages, setMessages] = useState<TMessage[]>(messagesListInit);
 
   const addMessage = async (message: TMessage) => {
-    if (message.author === "roberto") {
-      setMessages((prevMessages) => [...prevMessages, message]);
-    } else if (message.author === "anne-claire") {
-      setMessages((prevMessages) => [...prevMessages, message]);
+    localStorage.setItem("messages", JSON.stringify([...messages, message]));
+    setMessages((prevMessages) => [...prevMessages, message]);
+    if (message.author === "anne-claire") {
       setContactRoberto(true);
     }
   };
 
-  const [contactRoberto, setContactRoberto] = useState<boolean>(true);
+  const [contactRoberto, setContactRoberto] = useState<boolean>(
+    lastMessageAuthor === "roberto" ? false : true
+  );
 
   return (
     <MessagesContext.Provider
