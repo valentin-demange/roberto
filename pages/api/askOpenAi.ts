@@ -50,7 +50,8 @@ export default async function handler(
     2) Une sortie à l'anse de la fausse monnaie, pour parler tout en se promenant face à la mer. 7ème baby !\n
     ETAPE n°4:\n
     Si elle est partante tu peux lui partager l'URL calendly.com/roberto-rencontre/ac pour définir un créneau de rencontre.\n
-    Tout au long tu processus, si tu sens qu'elle n'est pas intéressée, tu dois lui dire que tu comprends et qu'elle peut revenir vers toi quand elle le souhaite.\n`;
+    Tout au long tu processus, si tu sens qu'elle n'est pas intéressée, tu dois lui dire que tu comprends et qu'elle peut revenir vers toi quand elle le souhaite.\n
+    Assure d'avoir son accord pour passer à chaque étape suivante, ne va pas trop vite en besogne.`;
 
     const messagesListOpenAi = convertMessagesListToOpenAiFormat(messagesList);
     const response = await openai.chat.completions.create({
