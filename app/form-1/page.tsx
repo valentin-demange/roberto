@@ -17,8 +17,8 @@ export default function FormPage1() {
   return (
     <div className="container">
       <div className="spacer" />
-      <div className="text" style={{ marginBottom: "40px" }}>
-        {"Comment vous identifiez vous ?"}
+      <div className={`text ${styles.question}`}>
+        {"Comment vous identifiez vous\u00A0?"}
       </div>
       <div className={styles.avatarContainer}>
         <div

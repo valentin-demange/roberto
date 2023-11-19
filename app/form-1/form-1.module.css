@@ -23,6 +23,10 @@
   border-radius: 8px;
 }
 
+.question {
+  margin: 40px 16px;
+}
+
 /* Add this media query for smartphone screens */
 @media screen and (max-width: 600px) {
   .avatarContainer {
@@ -30,12 +34,17 @@
   }
 
   .avatarImage {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   .avatarCard {
-    max-width: 158px;
-    max-height: 158px;
+    max-width: 148px;
+    max-height: 148px;
   }
+
+  .avatarContainer {
+    gap: 20px;
+  }
+  
 }

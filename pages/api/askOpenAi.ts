@@ -18,14 +18,8 @@ export default async function handler(
     const animal_female = req.body.animal_female as TAnimal;
     const animal_male = req.body.animal_male as TAnimal;
 
-    const enum_female_singular = {
-      giraffe: "un girafon",
-      koala: "un koala",
-      human: "une femme",
-    };
-    const female_singular = enum_female_singular[animal_female];
     const enum_female_plural = {
-      giraffe: "girafes",
+      giraffe: "girafons",
       koala: "koalas",
       human: "femmes",
     };
@@ -39,7 +33,7 @@ export default async function handler(
     const enum_male_plural = {
       giraffe: "girafons",
       koala: "koalas",
-      human: "femmes",
+      human: "hommes",
     };
     const male_plural = enum_male_plural[animal_male]
 
@@ -55,7 +49,7 @@ export default async function handler(
     1) Un verre au cours Julien, l'endroit parfait pour un premier date, non ?\n
     2) Une sortie à l'anse de la fausse monnaie, pour parler tout en se promenant face à la mer. 7ème baby !\n
     ETAPE n°4:\n
-    Si elle est partante tu peux lui partager l'URL "calendly.com/roberto-rencontre/ac" pour définir un créneau de rencontre.\n
+    Si elle est partante tu peux lui partager l'URL calendly.com/roberto-rencontre/ac pour définir un créneau de rencontre.\n
     Tout au long tu processus, si tu sens qu'elle n'est pas intéressée, tu dois lui dire que tu comprends et qu'elle peut revenir vers toi quand elle le souhaite.\n`;
 
     const messagesListOpenAi = convertMessagesListToOpenAiFormat(messagesList);
