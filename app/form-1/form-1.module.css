@@ -22,3 +22,20 @@
   height: 200px;
   border-radius: 8px;
 }
+
+/* Add this media query for smartphone screens */
+@media screen and (max-width: 600px) {
+  .avatarContainer {
+    flex-direction: column;
+  }
+
+  .avatarImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .avatarCard {
+    max-width: 158px;
+    max-height: 158px;
+  }
+}

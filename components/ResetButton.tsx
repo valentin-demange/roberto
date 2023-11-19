@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import styles from "./ActionsButton.module.css";
+import styles from "./ResetButton.module.css";
 import { useRouter } from "next/navigation";
 
-export const ActionsButton = () => {
+export const ResetButton = () => {
   const router = useRouter();
 
   const reset = () => {
@@ -15,9 +15,9 @@ export const ActionsButton = () => {
   };
 
   return (
-      <button className={`button ${styles.resetButton}`} onClick={reset}>
-       <div className={styles.resetSign}>&#8634;</div>
-       <div>Reset</div>
-      </button>
+    <button className={`button ${styles.resetButton}`} onClick={reset}>
+      <div className={styles.resetSign}>&#8634;</div>
+      <div>Reset</div>
+    </button>
   );
 };

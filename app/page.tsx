@@ -21,12 +21,7 @@ export default function HomePage() {
     <div className="container">
       <div className="spacer" />
       <div
-        className="text"
-        style={{
-          margin: "100px",
-          marginBottom: "40px",
-          textAlign: "justify",
-        }}
+        className={`text ${styles.description}`}
       >
         {styledDescription}
       </div>

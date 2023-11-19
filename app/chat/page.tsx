@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { MessagesList } from "@/components/MessagesList";
-import { ActionsButton } from "@/components/ActionsButton";
+import { ResetButton } from "@/components/ResetButton";
 import { VirtualKeyboard } from "@/components/VirtualKeyboard";
 import {
   MessagesContextProvider,
@@ -11,15 +11,15 @@ import {
 import styles from "./chat.module.css";
 
 export default function ChatPage() {
-
-  const [messagesListInit, setMessagesListInit] = useState<TMessage[] | null>(null);
+  const [messagesListInit, setMessagesListInit] = useState<TMessage[] | null>(
+    null
+  );
 
   useEffect(() => {
     const storedMessages = localStorage.getItem("messages");
     if (storedMessages) {
       setMessagesListInit(JSON.parse(storedMessages));
-    }
-    else {
+    } else {
       setMessagesListInit([]);
     }
   }, []);
@@ -30,7 +30,7 @@ export default function ChatPage() {
         <MessagesContextProvider messagesListInit={messagesListInit}>
           <div className={`container ${styles.container}`}>
             <div className={styles.actionsButtonContainer}>
-              <ActionsButton />
+              <ResetButton />
             </div>
             <div className={styles.messagesListContainer}>
               <MessagesList />

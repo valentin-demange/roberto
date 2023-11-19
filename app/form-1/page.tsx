@@ -17,9 +17,14 @@ export default function FormPage1() {
   return (
     <div className="container">
       <div className="spacer" />
-      <div className="text" style={{marginBottom: "40px"}}>{"Comment vous identifiez vous ?"}</div>
+      <div className="text" style={{ marginBottom: "40px" }}>
+        {"Comment vous identifiez vous ?"}
+      </div>
       <div className={styles.avatarContainer}>
-        <div className={styles.avatarCard} onClick={() => goToNextStep("human")}>
+        <div
+          className={styles.avatarCard}
+          onClick={() => goToNextStep("human")}
+        >
           <Image
             className={styles.avatarImage}
             src="/woman.png"
@@ -29,7 +34,10 @@ export default function FormPage1() {
             style={{ position: "relative", zIndex: -1 }}
           />
         </div>
-        <div className={styles.avatarCard} onClick={() => goToNextStep("giraffe")}>
+        <div
+          className={styles.avatarCard}
+          onClick={() => goToNextStep("giraffe")}
+        >
           <Image
             className={styles.avatarImage}
             src="/giraffe-female.png"
@@ -39,7 +47,10 @@ export default function FormPage1() {
             style={{ position: "relative", zIndex: -1 }}
           />
         </div>
-        <div className={styles.avatarCard} onClick={() => goToNextStep("koala")}>
+        <div
+          className={styles.avatarCard}
+          onClick={() => goToNextStep("koala")}
+        >
           <Image
             className={styles.avatarImage}
             src="/koala-female.png"

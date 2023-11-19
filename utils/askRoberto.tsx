@@ -1,25 +1,23 @@
 import { TMessage } from "@/components/MessageContextProvider";
+import { lockfilePatchPromise } from "next/dist/build/swc";
 
-export async function askRoberto(messagesList: TMessage[]):Promise<string|null> {
-    return "Bonjour c'est Roberta !!"
-    try {
-      const response = await fetch("/api/askOpenAi", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-        //   promptOpenAi: formatGilbertPrompt(messagesList, userName),
-        //   userName: userName,
-        messages: messagesList,
-        }),
-      });
-      const data = await response.json();
-      console.log("data.result: ", data.result)
-      return "Bonjour c'est Roberta !!";
-    } catch (error: any) {
-      alert(error.message);
-    }
-    return null;
-  }
-  
+export async function askRoberto(
+  messagesList: TMessage[]
+): Promise<string | null> {
+    const response = await fetch("/api/askOpenAi", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messagesList: messagesList,
+        animal_female: localStorage.getItem("animal_female"),
+        animal_male: localStorage.getItem("animal_male"),
+      }),
+    });
+    console.log(localStorage.getItem("animal_female"));
+    console.log(localStorage.getItem("animal_male"));
+    const data = await response.json();
+    console.log("data", data);
+    return data.output;
+}

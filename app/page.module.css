@@ -7,3 +7,15 @@
   border-radius: var(--border-radius-xl);
   border: 1px solid rgba(0, 0, 0, 0);
 }
+
+.description {
+  margin: 100px;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .description {
+    margin: 30px;
+  }
+}
