@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./form-1.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,6 +8,16 @@ import { TAnimal } from "../type";
 
 export default function FormPage1() {
   const router = useRouter();
+
+  useEffect(() => {
+    const animal_female = localStorage.getItem("animal_female");
+    const animal_male = localStorage.getItem("animal_male");
+    if (animal_female && animal_male) {
+      router.push("/chat");
+    } else if (animal_female) {
+      router.push("/form-2");
+    }
+  }, [router]);
 
   const goToNextStep = (choice: TAnimal) => {
     localStorage.setItem("animal_female", choice);
