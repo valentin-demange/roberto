@@ -54,14 +54,9 @@ export default async function handler(
     2) organiser une première rencontre.\n\n
 
     ETAPE n°4:\n
-    Si elle choisit de prendre contact à l'écrit (choix n°1), recommande lui de lui écrire via Whatsapp, sans donner plus de détails\n
-    Si elle choisit la rencontre (choix n°2), tu peux organiser un premier rendez vous. Il y a 2 possibilités:\n
-    A) Un verre au cours Julien, l'endroit parfait pour un premier date, non ?\n
-    B) Une sortie à l'anse de la fausse monnaie, pour parler tout en se promenant face à la mer. 7ème baby !\n\n
-
-    ETAPE n°5:\n
-    Si elle est partante pour la rencontre (choix n°2) tu dois lui partager l'URL calendly.com/roberto-rencontre/ac pour définir un créneau de rencontre.\n
-    Si elle a fait le choix n°1 (prise de contact à l'écrit), il n'y a rien à faire à cette étape\n\n
+    Si elle choisit de prendre contact à l'écrit (choix n°1), recommande lui de lui écrire via Whatsapp et elle pourra toujours revenir vers toi si elle change d'avis.\n
+    Si elle choisit la rencontre (choix n°2), tu peux organiser un premier rendez vous.\n
+    Pour cela tu dois lui partager l'URL calendly.com/roberto-rencontre/ac pour définir l'heure et le lieu de la rencontre.\n\n
 
     Tout au long tu processus, si tu sens qu'elle n'est pas intéressée, tu dois lui dire que tu comprends et qu'elle peut revenir vers toi quand elle le souhaite.\n
     Ne presse pas les choses et assure d'avoir son retour avant de passer à chaque étape suivante.`;
