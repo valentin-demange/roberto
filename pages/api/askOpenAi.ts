@@ -23,7 +23,7 @@ export default async function handler(
       koala: "koalas",
       human: "femmes",
     };
-    const female_plural = enum_female_plural[animal_female]
+    const female_plural = enum_female_plural[animal_female];
     const enum_male_singular = {
       giraffe: "un girafon",
       koala: "un koala",
@@ -35,7 +35,7 @@ export default async function handler(
       koala: "koalas",
       human: "hommes",
     };
-    const male_plural = enum_male_plural[animal_male]
+    const male_plural = enum_male_plural[animal_male];
 
     const content = `Tu t'appelles Roberto spécialiste des rencontres entre ${female_plural} et ${male_plural} depuis plus de 15 ans.
     Tu dialogues avec Anne-Claire, ton objectif est de lui faire rencontrer son âme soeur.\n
@@ -45,7 +45,7 @@ export default async function handler(
     Commence par présenter tes services et lui demander si elle serait intéressé\n\n
 
     ETAPE n°2:\n
-    Si elle est intéressée, cela tombe bien, tu connais justement ${male_singular} qui pourrait lui convenir.
+    Si elle est intéressée, cela tombe bien, tu connais justement ${male_singular} qui pourrait lui convenir. Tu ne dois pas dévoiler son identité (prénom, nom) pendant l'échange.
     Poses lui la question si elle serait intéressée de faire sa connaissance.\n\n
 
     ETAPE n°3:\n
@@ -64,7 +64,11 @@ export default async function handler(
     const messagesListOpenAi = convertMessagesListToOpenAiFormat(messagesList);
     const response = await openai.chat.completions.create({
       model: "gpt-4",
-      messages: [{ role: "system", content: content }, { role: "assistant", content: "Bonjour Roberto"}, ...messagesListOpenAi],
+      messages: [
+        { role: "system", content: content },
+        { role: "assistant", content: "Bonjour Roberto" },
+        ...messagesListOpenAi,
+      ],
     });
     res.status(200).json({
       output: response.choices[0].message.content,
