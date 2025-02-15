@@ -28,8 +28,9 @@ export const MessagesList = () => {
       try {
         const results = await Promise.all([
           askRoberto(messages),
+          console.log("openAi answered!"),
           new Promise((resolve) =>
-            setTimeout(resolve, 1500 + Math.random() * 2000)
+            setTimeout(resolve, 0 * Math.random() * 1000)
           ),
         ]);
         if (isCancelled) return; // Check again after the timeout.
