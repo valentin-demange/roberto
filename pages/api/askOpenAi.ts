@@ -63,7 +63,7 @@ export default async function handler(
 
     const messagesListOpenAi = convertMessagesListToOpenAiFormat(messagesList);
     const response = await openai.chat.completions.create({
-      model: "gpt-4",
+      model: "gpt-5",
       messages: [
         { role: "system", content: content },
         { role: "assistant", content: "Bonjour Roberto" },
