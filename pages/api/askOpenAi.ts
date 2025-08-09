@@ -7,7 +7,7 @@ import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 
 const openai = new OpenAI({
   apiKey: process.env.NEXT_OPENAI_API_KEY,
-  timeout: 15000, // 15 seconds
+  timeout: 30000, // 30 seconds
 });
 
 export default async function handler(
