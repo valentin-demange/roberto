@@ -41,8 +41,14 @@ export const MessagesList = () => {
           setIsRobertoAnswering(false);
         }
       } catch (error: any) {
-        alert(error.message);
+        console.error("Failed to get Roberto's response:", error);
         setIsRobertoAnswering(false);
+        setContactRoberto(false);
+        
+        addMessage({ 
+          text: "Oupsi problème technique, tu peux me redonner ta réponse ?", 
+          author: "roberto" 
+        });
       }
     };
 
