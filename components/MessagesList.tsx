@@ -46,7 +46,7 @@ export const MessagesList = () => {
         setContactRoberto(false);
         
         addMessage({ 
-          text: "Oupsi problème technique, tu peux me redonner ta réponse ?", 
+          text: "Oupsi problème technique, peux tu me redonner ta réponse ?", 
           author: "roberto" 
         });
       }
